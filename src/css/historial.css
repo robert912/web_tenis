@@ -1,0 +1,36 @@
+/*=======================================
+=========  Carrousel Marcas   ===========
+=======================================*/
+#carousel-0 {margin-top:0; margin-bottom:0;}
+.banners-slider-carousel  .carousel-block{ 
+    margin: 40px auto 20px;
+    position: relative;
+}
+
+#carousel-0.banners-slider-carousel .container{  position: relative; }
+#carousel-0.banners-slider-carousel .customNavigation a{
+ opacity:0;
+ -khtml-opacity: 0;
+ -webkit-opacity: 0;
+ -moz-opacity:0;
+ top: -10px;
+}
+#carousel-0.banners-slider-carousel:hover .customNavigation a{
+ opacity:1;
+ -khtml-opacity: 1;
+ -webkit-opacity: 1;
+ -moz-opacity:1;
+  transition: none;
+ -moz-transition: none;
+ -webkit-transition:none;
+ -ms-transition: none;
+ -o-transition: none;
+}
+
+#carousel-0.banners-slider-carousel .customNavigation a{
+ opacity:1;
+ -khtml-opacity: 1;
+ -webkit-opacity: 1;
+ -moz-opacity:1;
+}
+

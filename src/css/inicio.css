@@ -1,0 +1,104 @@
+/*Los indicadores del carrusel del bootstrap bolas de tenis*/
+.carousel-indicators [data-bs-target] {
+    /* Aumentar el tamaño de los indicadores */
+    width: 15px;/* Ancho del indicador */
+    height: 15px;/* Alto del indicador */
+
+    /* Ajustar la imagen de fondo */
+    background-image: url("../images/list-ball-yellow.svg");
+    background-size: cover;/* Ajusta la imagen para cubrir el área del indicador */
+    background-position: center;/* Centra la imagen en el indicador */
+    border-radius: 50%;/* Hace que los indicadores sean circulares */
+    border: 2px solid #fff;/* Opcional: añade un borde para mejor visibilidad */
+}
+
+.carousel {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 600px; /* Altura fija para el carrusel (ajusta este valor) */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda la altura */
+    margin-top: 32px;
+}
+  
+.carousel-inner {
+    height: 100%; /* Hereda la altura del contenedor */
+}
+  
+.carousel-item {
+    height: 100%; /* Asegura que cada item ocupe la altura del contenedor */
+}
+  
+.carousel-item img {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa todo el alto */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarse */
+}
+
+.carousel-indicators {
+    margin-bottom: 3rem;
+}
+
+.carousel-caption {
+    bottom: 2.25rem;
+}
+
+/*=======================================
+=========        CARD         ===========
+=======================================*/
+/* From Uiverse.io by alexruix */ 
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+   }
+   
+   .card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+
