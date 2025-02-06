@@ -21,6 +21,7 @@ h1 {
     display: flex; /* Mostrar la barra superior */
     /* height: var(--top-bar-height); Altura fija */
     background-color: var(--color-yellow);
+    background: linear-gradient(-45deg, var(--color-green-light) 0%, var(--color-yellow-light) 100%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: space-around;
@@ -29,6 +30,10 @@ h1 {
     left: 0;
     width: 100%; /* Ocupar todo el ancho de la pantalla */
     z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+.dropdown-menu{
+    background: linear-gradient(-45deg, var(--color-green-light) 0%, var(--color-yellow-light) 100%);
 }
 
 .logo {
@@ -154,7 +159,7 @@ input {
     width: 120px;
     height: 1px;
     display: inline-block;
-    background: #9ae1af;
+    background: linear-gradient(-45deg, #03fa61 0%, yellow 100%);
     margin: 4px 10px;
 }
   

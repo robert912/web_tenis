@@ -2,7 +2,9 @@
     --primary-color: #D6E1B6;
     --secondary-color: #FAD6BE;
     --color-yellow: #F2DB13;
+    --color-yellow-light: #ffff00;
     --color-green: #aacc2f;
+    --color-green-light: #03fa61;
     --color-purple: #fb40ff;
     --text-color: #333;
     --bg-color: #f4f4f4;
@@ -185,6 +187,7 @@
 .bg-cobre{background-color: var(--color-cobre);}
 .bg-black{background-color: var(--color-black);}
 .bg-yellow{background-color: var(--color-yellow);}
+.bg-green{background: var(--color-green-light);}
 
 .btn {
     display: inline-block;
