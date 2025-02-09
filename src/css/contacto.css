@@ -1,0 +1,106 @@
+
+/*=======================================
+=========  Carrousel Marcas   ===========
+=======================================*/
+#carouselMain {
+    height: 600px;
+    position: relative;
+}
+
+.carousel-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    height: 100vh; 
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+.carousel-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    transition: opacity 0.3s ease;
+}
+
+
+.carousel-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.3s ease;
+    background-image: url("/src/images/list-ball-lightgrey.svg");
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+}
+
+.carousel-button.active {
+    background-image: url("/src/images/list-ball-yellow.svg");
+}
+
+
+.carousel-buttons-details {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transition: opacity 1s ease;
+}
+
+
+.carousel-detail {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+
+    border: 2px solid white;
+    cursor: pointer;
+
+    background-color: aqua;   
+    transition: opacity 1s ease;
+}
+
+.carousel-detail.active {
+    opacity: 1;
+    background-color: #e81cff;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}

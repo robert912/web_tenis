@@ -1,107 +1,44 @@
 <link rel="stylesheet" href="/src/css/historial.css">
 
 
-<section id="card_marcas" class="mt-5 pt-5">
-    <div class="container" data-aos="fade-up">
-        <div class="section-title">
-            <h2>Cursos</h2>
-            <p>Programas Destacados</p>
-        </div>
-        <div id="carousel-0" class="banners-slider-carousel box">
-            <div class="box-heading">Top Brands</div>
-            <div class="carousel-block">
-                <div class="customNavigation">
-                    <a class="prev fa fa-arrow-left">&nbsp;</a>
-                    <a class="next fa fa-arrow-right">&nbsp;</a>
-                </div>
-                <div class="product-carousel" id="module-0-carousel" style="opacity: 1; display: block;">
-                    <div class="slider-wrapper-outer">
-                        <div class="slider-wrapper"
-                            style="width: 3900px; left: 0px; display: block; transition: 200ms; transform: translate3d(-195px, 0px, 0px);">
-                            <div class="slider-item" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/4-200x70.png"
-                                            alt="NFL">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/2-200x70.png"
-                                            alt="Sony">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item first_item_cz" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/1-200x70.png"
-                                            alt="Coca Cola">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/7-200x70.png"
-                                            alt="Burger King">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/5-200x70.png"
-                                            alt="Canon">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/6-200x70.png"
-                                            alt="Harley Davidson">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/4-200x70.png"
-                                            alt="Disney">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item last_item_cz" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/3-200x70.png"
-                                            alt="Dell">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item first_item_cz" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/2-200x70.png"
-                                            alt="Starbucks">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item" style="width: 195px;">
-                                <div class="product-block" style="height: 70px;">
-                                    <div class="product-block-inner">
-                                        <img src="https://codezeel.com/opencart/OPC01/OPC010007/image/cache/catalog/1-200x70.png"
-                                            alt="Nintendo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Carrusel de Imágenes</h2>
+    <!-- Carrusel -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <body>
+            <div id="carousel-area">
+                <div id="carousel"></div>
+                <div class="buttons">
+                    <button class="icon-btn" onclick="moveToSelected('prev')">
+                        <img src="https://i.postimg.cc/jwWs9zZ1/arrow-L.png" alt="prev" class="icon-img">
+                    </button>
+                    <button class="icon-btn" onclick="moveToSelected('next')">
+                        <img src="https://i.postimg.cc/k6kndBHg/arrow-R.png" alt="next" class="icon-img">
+                    </button>
                 </div>
             </div>
-        </div>
+        </body>
     </div>
-</section>
+</div>
+
+<div class="container">
+    <h2 class="text-center mb-4">Carrusel Marcas</h2>
+    <!-- Carrusel -->
+    <div class="carrusel-container">
+        <div class="carrusel">
+            <div><img src="/src/images/5-200x70.png" alt="imagen1"></div>
+            <div><img src="/src/images/5-200x70.png" alt="imagen1"></div>
+            <div><img src="/src/images/5-200x70.png" alt="imagen1"></div>
+            <div><img src="/src/images/5-200x70.png" alt="imagen1"></div>
+            <div><img src="/src/images/5-200x70.png" alt="imagen1"></div>
+            <div><img src="/src/images/5-200x70.png" alt="imagen1"></div>
+        </div>
+        <button class="carrusel-button prev">&lt;</button>
+        <button class="carrusel-button next">&gt;</button>
+    </div>
+</div>
+
+
+
