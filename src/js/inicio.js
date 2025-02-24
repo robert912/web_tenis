@@ -1,15 +1,29 @@
 (() => {
-    const cards = [
-        { title: "Card 1", content: "This is the content for card 1" },
-        { title: "Card 2", content: "This is the content for card 2" },
-        { title: "Card 3", content: "This is the content for card 3" },
-        { title: "Card 4", content: "This is the content for card 4" },
-        { title: "Card 5", content: "This is the content for card 5" }
-      ];
     /*=======================================
-    ========= Carrousel Principal ===========
+    ============ Carrousel Marcas ===========
     =======================================*/
-    
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:4
+            }
+        }
+    })
+    // ========= Fin Carrousel Marcas ===========
 
-    // ========= Fin Carrousel Principal ===========
+
+
+
 })();

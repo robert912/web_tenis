@@ -1,3 +1,4 @@
+(() => {
 const images = [
     { src: "https://i.postimg.cc/1X5zGSHT/storyintro1.jpg", alt: "IMG1", link: "#IMG1" },
     { src: "https://i.postimg.cc/yxQ8nGpN/storyintro2.jpg", alt: "IMG2", link: "#IMG2" },
@@ -55,34 +56,4 @@ function moveToSelected(direction) {
 // Initial creation
 createCarousel();
 
-
-
-
-    const carrusel = document.querySelector('.carrusel');
-    const prevButton = document.querySelector('.carrusel-button.prev');
-    const nextButton = document.querySelector('.carrusel-button.next');
-    const slides = carrusel.children;
-    let currentIndex = 0;
-
-    function showSlide(index) {
-        if (index < 0) {
-            currentIndex = slides.length - 1;
-        } else if (index >= slides.length) {
-            currentIndex = 0;
-        } else {
-            currentIndex = index;
-        }
-        carrusel.style.transform = `translateX(-${currentIndex * 25}%)`;
-    }
-
-    prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
-    nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
-
-    // Opcional: Navegación con teclado
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') {
-            showSlide(currentIndex - 1);
-        } else if (e.key === 'ArrowRight') {
-            showSlide(currentIndex + 1);
-        }
-    });
+})();
