@@ -9,6 +9,8 @@
         autoplayTimeout:2000,
         autoplayHoverPause:true,
         nav:true,
+        mouseDrag: true,
+        touchDrag: true,
         responsive:{
             0:{
                 items:1

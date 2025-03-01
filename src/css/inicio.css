@@ -215,3 +215,54 @@
     text-align: center;
     margin: 1rem auto;
   }
+
+
+
+
+
+
+
+/*=======================================
+=========   Carrusel Marcas   ===========
+=======================================*/
+
+.owl-carousel .item img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 150px; /* Establece una altura fija */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 10px;
+}
+
+.owl-carousel .owl-nav {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.owl-carousel .owl-prev {
+    margin-left: 10px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.owl-carousel .owl-next {
+    margin-right: 10px; /* Ajusta la posición de la flecha derecha */
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    font-size: 25px; /* Tamaño de la flecha */
+    width: 40px;     /* Ancho del botón */
+    height: 40px;    /* Alto del botón */
+    line-height: 1px; /* Centrar el ícono verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white;    /* Color de la flecha */
+    border-radius: 50%; /* Hacer el botón circular */
+    text-align: center; /* Centrar el ícono horizontalmente */
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambiar el fondo al pasar el mouse */
+}
