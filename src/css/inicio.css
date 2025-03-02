@@ -5,11 +5,15 @@
     height: 15px;/* Alto del indicador */
 
     /* Ajustar la imagen de fondo */
-    background-image: url("../images/list-ball-yellow.svg");
+    background-image: url("../images/list-ball-lightgrey.svg");
     background-size: cover;/* Ajusta la imagen para cubrir el área del indicador */
     background-position: center;/* Centra la imagen en el indicador */
     border-radius: 50%;/* Hace que los indicadores sean circulares */
     border: 2px solid #fff;/* Opcional: añade un borde para mejor visibilidad */
+}
+
+#carouselPrincipal .carousel-indicators [data-bs-target].active {
+    background-image: url("/src/images/list-ball-yellow.svg");
 }
 
 .carousel {
@@ -235,19 +239,11 @@
 
 .owl-carousel .owl-nav {
     position: absolute;
-    top: 40%;
+    top: 37%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-}
-
-.owl-carousel .owl-prev {
-    margin-left: 10px; /* Ajusta la posición de la flecha izquierda */
-}
-
-.owl-carousel .owl-next {
-    margin-right: 10px; /* Ajusta la posición de la flecha derecha */
 }
 
 .owl-carousel .owl-nav button.owl-prev,
@@ -255,8 +251,8 @@
     font-size: 25px; /* Tamaño de la flecha */
     width: 40px;     /* Ancho del botón */
     height: 40px;    /* Alto del botón */
-    line-height: 1px; /* Centrar el ícono verticalmente */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    line-height: 40px; /* Centrar el ícono verticalmente */
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semi-transparente */
     color: white;    /* Color de la flecha */
     border-radius: 50%; /* Hacer el botón circular */
     text-align: center; /* Centrar el ícono horizontalmente */
@@ -265,4 +261,36 @@
 .owl-carousel .owl-nav button.owl-prev:hover,
 .owl-carousel .owl-nav button.owl-next:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Cambiar el fondo al pasar el mouse */
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -10px;
+	color:#fff;
+	cursor:pointer;
+	font-size: 0px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -10px;
+	color:#fff;
+	font-size: 0px;
+	cursor:pointer;
+	background-position: -56px 2px;
+}
+
+.owl-carousel .owl-nav button.owl-prev:before,
+.owl-carousel .owl-nav button.owl-next:before {
+	font-size: 32px;
+    font-family: "FontAwesome";
+    font-weight: normal;
+}
+.owl-carousel .owl-nav button.owl-prev:before {
+    content: "\f104";
+}
+.owl-carousel .owl-nav button.owl-next:before {
+    content: "\f105";
+}
+.owl-carousel .owl-nav button.owl-prev:hover:before,
+.owl-carousel .owl-nav button.owl-next:hover:before {
+	color: var(--color-yellow-light);
 }
