@@ -56,12 +56,12 @@
     --color-pink-rgb: 232, 62, 140;
     /* Spacing */
     --spacing-0: 0;
-    --spacing-1: 5px;
-    --spacing-2: 10px;
-    --spacing-3: 15px;
-    --spacing-4: 20px;
-    --spacing-5: 25px;
-    --spacing-6: 30px;
+    --spacing-1: 10px;
+    --spacing-2: 20px;
+    --spacing-3: 30px;
+    --spacing-4: 40px;
+    --spacing-5: 50px;
+    --spacing-6: 60px;
 }  
   
 /* Margin */
