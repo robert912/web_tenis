@@ -1,4 +1,3 @@
-let loadPage;
 document.addEventListener('DOMContentLoaded', () => {
     let currentPage = 'inicio';
     const content = document.getElementById('content');
@@ -8,18 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let iconCartSpan = document.querySelector('.icon-cart span');
     let body = document.querySelector('body');
     let closeCart = document.querySelector('.close');
+    let cartTab = document.querySelector('.cartTab');
     let products = [];
     let cart = [];
     // const pageTitle = document.querySelector('.page-title');
     iconCart.addEventListener('click', () => {
-        body.classList.toggle('showCart');
+        cartTab.classList.toggle('show');
     })
     closeCart.addEventListener('click', () => {
-        body.classList.toggle('showCart');
+        cartTab.classList.toggle('show');
     })
 
     window.addToCart = (product_id) => {
-        console.log(product_id)
         let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
         if(cart.length <= 0){
             cart = [{
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }else{
             cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
         }
-        console.log(cart)
         addCartToHTML();
         addCartToMemory();
     }
@@ -46,16 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let totalQuantity = 0;
         if(cart.length > 0){
             cart.forEach(item => {
-                console.log(item);
                 totalQuantity = totalQuantity +  item.quantity;
                 let newItem = document.createElement('div');
                 newItem.classList.add('item');
                 newItem.dataset.id = item.product_id;
     
                 let positionProduct = products.findIndex((value) => value.id == item.product_id);
-                console.log(positionProduct);
                 let info = products[positionProduct];
-                console.log(info);
                 listCartHTML.appendChild(newItem);
                 newItem.innerHTML = `
                 <div class="image">
@@ -87,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             changeQuantityCart(product_id, type);
         }
     })
-    const changeQuantityCart = (product_id, type) => {
+    window.changeQuantityCart = (product_id, type) => {
         let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
         if(positionItemInCart >= 0){
             let info = cart[positionItemInCart];
@@ -193,5 +188,3 @@ function formatearValorPesos(numero) {
     var value = numero.toString().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     return value;
 }
-
-
