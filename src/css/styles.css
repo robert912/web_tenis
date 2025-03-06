@@ -112,6 +112,13 @@ h1 {
     .top-bar .navbar-brand {
         display: none;
     }
+
+    .top-bar .icon-cart {
+        position: fixed;
+        top: 6px;
+        right: 18px;
+    }
+
     .menu {
         gap: 0;
     }
