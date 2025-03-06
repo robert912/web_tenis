@@ -116,7 +116,7 @@ h1 {
 
 
 @media (max-width: 768px) {
-    .logo-img {
+    .top-bar .navbar-brand {
         display: none;
     }
     .menu {
