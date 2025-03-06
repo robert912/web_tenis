@@ -44,6 +44,7 @@ h1 {
 
 .top-bar .menu-link {
     font-size: 1.1rem;
+    line-height: 2.2;
     margin: 0 10px;
     padding: 10px 15px;
     color: var(--text-color);
@@ -89,14 +90,6 @@ h1 {
     text-align: center;
     text-decoration: none;
     color: var(--white);
-}
-
-.logo-img {
-    height: 50px;
-    object-fit: cover;
-    /*border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);*/
 }
 
 .logo-text {
