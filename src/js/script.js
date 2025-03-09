@@ -56,14 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="image">
                         <img src="${info.image}">
                     </div>
-                    <div class="name">
-                    ${info.name}
+                    <div class="infoProducto">
+                        <div class="name">${info.name}</div>
+                        <div class="totalPrice">$${info.price * item.quantity}</div>
                     </div>
-                    <div class="totalPrice">$${info.price * item.quantity}</div>
                     <div class="quantity">
                         <span class="minus"><</span>
                         <span>${item.quantity}</span>
                         <span class="plus">></span>
+                    </div>
+                    <div>
+                        <a href="#" class="delete-btn"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
                 `;
             })
@@ -80,8 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 type = 'plus';
             }
             changeQuantityCart(product_id, type);
+        } else if (positionClick.classList.contains('fa-trash-can')) {
+            let product_id = positionClick.closest('.item').dataset.id;
+            removeFromCart(product_id);
         }
-    })
+    });
+
     window.changeQuantityCart = (product_id, type) => {
         let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
         if(positionItemInCart >= 0){
@@ -100,6 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     break;
             }
+        }
+        addCartToHTML();
+        addCartToMemory();
+    }
+
+    window.removeFromCart = (product_id) => {
+        let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
+        if(positionItemInCart >= 0){
+            cart.splice(positionItemInCart, 1);
         }
         addCartToHTML();
         addCartToMemory();
