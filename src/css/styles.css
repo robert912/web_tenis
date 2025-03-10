@@ -6,11 +6,26 @@
 
 body {
     font-family: 'Titillium Web', sans-serif;/*'Inter', sans-serif;*/
-    background-color: var(--bg-color);
+    background-image: url('/src/images/image_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--text-color);
     line-height: 1.6;
     font-weight: 600;
 }
+/* 
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+} */
 
 h1 {
     text-align: center;
@@ -20,16 +35,23 @@ h1 {
 .top-bar {
     display: flex; /* Mostrar la barra superior */
     /* height: var(--top-bar-height); Altura fija */
-    background-color: var(--color-yellow);
     background: linear-gradient(-45deg, var(--color-green-light) 0%, var(--color-yellow-light) 100%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed; /* Fijarla en la parte superior */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
+    transition: background 0.3s ease;
 }
-
+body.inicio .top-bar {
+    background: transparent;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.top-bar.scrolled {
+    background: linear-gradient(-45deg, var(--color-green-light) 0%, var(--color-yellow-light) 100%) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
 .top-bar .navbar-brand {
     display: flex;
     align-items: center;
@@ -69,11 +91,11 @@ h1 {
 .top-bar .icon-cart span {
     position: absolute;
     background-color: #fc3b3c;
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     border-radius: 50%;
     color: #fff;
     top: -50%;
@@ -85,6 +107,14 @@ h1 {
 
 .dropdown-menu{
     background: linear-gradient(-45deg, var(--color-green-light) 0%, var(--color-yellow-light) 100%);
+    transition: background 0.3s ease;
+}
+body.inicio .dropdown-menu{
+    background: transparent;
+}
+.dropdown-menu.scrolled {
+    background: linear-gradient(-45deg, var(--color-green-light) 0%, var(--color-yellow-light) 100%) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -122,6 +152,7 @@ h1 {
 
     .menu {
         gap: 0;
+        padding-top: 10px;
     }
 }
 
@@ -184,13 +215,13 @@ input {
 /* cart */
 .cartTab {
     position: fixed;
-    top: 60px;
+    top: 0;
     right: 0;
-    background-color: #353432;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    background-color: #7f4b00;
+    box-shadow: -1px 0 5px rgba(0,0,0,0.5);
     color: #eee;
     z-index: 2;
-    padding: 10px;
+    padding: 60px 10px 0;
     bottom: 0;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
@@ -242,7 +273,7 @@ body.showCart .container{
     background-color: #eee1;
 }
 .listCart .item .delete-btn {
-    color: var(--color-danger-dark);
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -262,7 +293,7 @@ body.showCart .container{
     border-radius: 50%;
     color: #555;
     cursor: pointer;
-    line-height: 25px;
+    line-height: 20px;
     text-align: center;
 }
 
@@ -279,9 +310,6 @@ body.showCart .container{
     width: 0;
 }
 @media only screen and (max-width: 992px) {
-    .cartTab{
-        top: 55px;
-    }
     .listProduct{
         grid-template-columns: repeat(3, 1fr);
     }

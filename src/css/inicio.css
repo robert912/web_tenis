@@ -18,23 +18,33 @@
 
 .carousel {
     width: 100%; /* Ocupa todo el ancho */
-    height: 600px; /* Altura fija para el carrusel (ajusta este valor) */
+    height: 100%; /* Altura fija para el carrusel (ajusta este valor) */
     overflow: hidden; /* Oculta cualquier parte de la imagen que exceda la altura */
-    margin-top: 32px;
+    /* margin-top: 32px; */
+}
+
+#carouselMain {
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
 }
   
-.carousel-inner {
+#carouselPrincipal .carousel-inner {
     height: 100%; /* Hereda la altura del contenedor */
 }
   
-.carousel-item {
+#carouselPrincipal .carousel-item {
     height: 100%; /* Asegura que cada item ocupe la altura del contenedor */
 }
   
-.carousel-item img {
+/* .carousel-item img {
     width: 100%; /* Ocupa todo el ancho */
-    height: 100%; /* Ocupa todo el alto */
-    object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarse */
+/*     height: 100%; /* Ocupa todo el alto */
+/*     object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarse */
+/* } */
+
+#carouselPrincipal .carousel-item img,
+#carouselPrincipal .carousel-item video {
+    height: 100%; /* Asegura que las imágenes y videos ocupen el 100% de la altura del item */
+    object-fit: cover; /* Asegura que las imágenes y videos cubran el área del item sin distorsión */
 }
 
 .carousel-indicators {
@@ -45,6 +55,10 @@
     bottom: 2.25rem;
 }
 
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: black;
+    border-radius: 50%;
+}
 /*=======================================
 =========        CARD         ===========
 =======================================*/
