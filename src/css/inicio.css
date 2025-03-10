@@ -68,28 +68,22 @@
 =========   Carrusel Marcas   ===========
 =======================================*/
 
+.owl-carousel .owl-stage-outer {
+    background-color: #000000a1;
+}
 .owl-carousel .item img {
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: 150px; /* Establece una altura fija */
+    height: 160px; /* Establece una altura fija */
     object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
     border-radius: 10px;
 }
 
-.owl-carousel .owl-nav {
-    position: absolute;
-    top: 37%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next {
-    font-size: 25px; /* Tamaño de la flecha */
-    width: 40px;     /* Ancho del botón */
-    height: 40px;    /* Alto del botón */
-    line-height: 40px; /* Centrar el ícono verticalmente */
+    /* font-size: 25px; Tamaño de la flecha */
+    width: 25px;     /* Ancho del botón */
+    height: 25px;    /* Alto del botón */
+    /* line-height: 40px; Centrar el ícono verticalmente */
     background-color: rgba(0, 0, 0, 0.3); /* Fondo semi-transparente */
     color: white;    /* Color de la flecha */
     border-radius: 50%; /* Hacer el botón circular */
@@ -101,33 +95,6 @@
     background-color: rgba(0, 0, 0, 0.8); /* Cambiar el fondo al pasar el mouse */
 }
 
-.owl-carousel .owl-nav button.owl-prev {
-    left: -10px;
-	color:#fff;
-	cursor:pointer;
-	font-size: 0px;
-}
-
-.owl-carousel .owl-nav button.owl-next {
-    right: -10px;
-	color:#fff;
-	font-size: 0px;
-	cursor:pointer;
-	background-position: -56px 2px;
-}
-
-.owl-carousel .owl-nav button.owl-prev:before,
-.owl-carousel .owl-nav button.owl-next:before {
-	font-size: 32px;
-    font-family: "FontAwesome";
-    font-weight: normal;
-}
-.owl-carousel .owl-nav button.owl-prev:before {
-    content: "\f104";
-}
-.owl-carousel .owl-nav button.owl-next:before {
-    content: "\f105";
-}
 .owl-carousel .owl-nav button.owl-prev:hover:before,
 .owl-carousel .owl-nav button.owl-next:hover:before {
 	color: var(--color-yellow-light);

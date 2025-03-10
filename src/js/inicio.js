@@ -4,7 +4,7 @@
     =======================================*/
     $('.owl-carousel').owlCarousel({
         loop:true,
-        margin:10,
+        margin:20,
         autoplay:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true,
@@ -19,7 +19,7 @@
                 items:2
             },
             1000:{
-                items:4
+                items:5
             }
         }
     })
