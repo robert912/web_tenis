@@ -87,7 +87,9 @@ body.inicio .top-bar {
 .top-bar .icon-cart svg {
     width: 25px;
 }
-
+.top-bar .icon-cart svg:hover {
+    color: var(--color-default);
+}
 .top-bar .icon-cart span {
     position: absolute;
     background-color: #fc3b3c;
